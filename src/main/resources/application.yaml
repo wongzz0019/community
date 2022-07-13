@@ -1,0 +1,57 @@
+server:
+  port: 8080
+  servlet:
+#    项目名
+    context-path: /community
+
+spring:
+  thymeleaf:
+    cache: false
+  datasource:
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    url: jdbc:mysql://localhost:3306/community?useUnicode=true&characterEncoding=utf-8&useSSL=true
+    username: root
+    password: 123456
+    type: com.zaxxer.hikari.HikariDataSource
+    hikari:
+      maximum-pool-size: 15
+      minimum-idle: 5
+      idle-timeout: 30000
+#MailProperties
+  mail:
+    host: smtp.qq.com
+    port: 465
+    username: 1041574606@qq.com
+    password: nzfenwwzbfpgbbic
+    protocol: smtp
+    properties:
+      mail:
+        smtp:
+          ssl:
+            enable: true
+
+#MybatisProperties
+mybatis:
+  mapper-locations: classpath:mapper/*.xml
+  type-aliases-package: com.hzz.entity
+  configuration:
+    #自动生成id机制
+    use-generated-keys: true
+    map-underscore-to-camel-case: true
+
+#logger
+#logging:
+#  level:
+#    com.hzz: debug
+#  file:
+#    path: f:/JavaWeb/communityLog
+#    name: community.log
+
+#community 激活路径，域名
+community:
+  path:
+    #域名，当前只能是本机地址
+    domain: http://localhost:8080
+    #自定义头像本地存储路径
+    upload: f:/JavaWeb/communityData/upload
+
