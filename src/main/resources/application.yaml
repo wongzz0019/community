@@ -19,7 +19,7 @@ spring:
       idle-timeout: 30000
 #MailProperties
   mail:
-    host: smtp.qq.com
+    host: smtp.xxxx.com
     port: 端口
     username: 你的QQ邮箱
     password: 协议密码
