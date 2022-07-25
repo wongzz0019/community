@@ -20,9 +20,9 @@ spring:
 #MailProperties
   mail:
     host: smtp.qq.com
-    port: 465
-    username: 1041574606@qq.com
-    password: nzfenwwzbfpgbbic
+    port: 端口
+    username: 你的QQ邮箱
+    password: 协议密码
     protocol: smtp
     properties:
       mail:
